@@ -14,7 +14,6 @@
     <!-- <link rel="shortcut icon" href="{{ asset('') }}"> -->
     {% block stylesheets %}
         {{ encore_entry_link_tags('app') }}
-
     {% endblock %}
 </head>
 
@@ -151,23 +150,7 @@
 <!--Renders app.js & a webpack runtime.js file -->
 <script src="/build/runtime.js"></script>
 <script src="/build/app.js"></script>
-<!-- JS Global Compulsory -->
-<script src="{{ asset('assets/vendor/jquery/jquery.min.js') }}"></script>
-<script src="{{ asset('assets/vendor/jquery-migrate/jquery-migrate.min.js') }}"></script>
-<script src="{{ asset('assets/vendor/popper.min.js') }}"></script>
-<script src="{{ asset('assets/vendor/bootstrap/bootstrap.min.js') }}"></script>
 
-
-<!-- JS Implementing Plugins -->
-
-<!-- JS Unify -->
-<script src="{{ asset('assets/js/hs.core.js') }}"></script>
-<script src="{{ asset('assets/js/helpers/hs.focus-state.js') }}"></script>
-
-<!-- JS Customization -->
-<script src="{{ asset('assets/js/custom.js') }}"></script>
-
-<!-- JS Plugins Init. -->
 <script>
     $(document).on('ready', function () {
 
