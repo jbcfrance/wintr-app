@@ -66,11 +66,9 @@
             "cache:clear": "symfony-cmd"
         },
         "post-install-cmd": [
-            "chmod -R ug+w $APP_DIR/var",
             "@auto-scripts"
         ],
         "post-update-cmd": [
-            "chmod -R ug+w $APP_DIR/var",
             "@auto-scripts"
         ]
     },
