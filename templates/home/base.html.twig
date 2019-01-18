@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="{{ title }}">
+
+        <meta property="og:description" content="Aemon GOT Allegance">
+
+        <meta name="msapplication-TileColor" content="#222222">
+        <meta name="application-name" content="{{ title }}">
+        <meta name="msapplication-tooltip" content="{{ title }}">
+
+
+      <title>{% block title %}{{ title }}{% endblock %}</title>
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+        {% block stylesheets %}
+            <!-- Google Fonts -->
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+            <!-- CSS Global Compulsory -->
+            <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/bootstrap.min.css') }}">
+            <!-- CSS Global Icons -->
+            <link rel="stylesheet" href="{{ asset('assets/vendor/icon-awesome/css/font-awesome.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/vendor/icon-line/css/simple-line-icons.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/vendor/icon-etlinefont/style.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/vendor/icon-line-pro/style.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/vendor/icon-hs/style.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/vendor/animate.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/vendor/hs-megamenu/src/hs.megamenu.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/vendor/hamburgers/hamburgers.min.css') }}">
+
+            <!-- CSS Unify -->
+            <link rel="stylesheet" href="{{ asset('assets/css/unify-core.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/css/unify-components.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/css/unify-globals.css') }}">
+
+            <!-- CSS Customization -->
+            <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
+        {% endblock %}
+    </head>
+    <body>
+    <main>
+      {% block header %}
+        <!-- Header -->
+        <header id="js-header" class="u-header u-header--static">
+          <div class="u-header__section u-header__section--light g-bg-white g-transition-0_3 g-py-10">
+            <nav class="js-mega-menu navbar navbar-expand-lg hs-menu-initialized hs-menu-horizontal">
+              <div class="container">
+                <!-- Responsive Toggle Button -->
+                <button class="navbar-toggler navbar-toggler-right btn g-line-height-1 g-brd-none g-pa-0 g-pos-abs g-top-3 g-right-0" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navBar" data-toggle="collapse" data-target="#navBar">
+            <span class="hamburger hamburger--slider">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+            </span>
+            </span>
+                </button>
+                <!-- End Responsive Toggle Button -->
+
+                <!-- Logo -->
+                <a href="{{ path('home') }}" class="navbar-brand">
+                  <img class="w-25 h-25 img-fluid rounded-circle" src="{{ asset('assets/img/logo/logo_aemon.png') }}" alt="Aemon">
+                </a>
+                <h4 class="f-color-darkred">{{ 'home.logo'|trans({},'messages') }}</h4>
+                <!-- End Logo -->
+                <div class="g-pos-rel g-width-50 g-pt-3--lg g-ml-30 g-ml-0--lg">
+                  <a href="{{ app.request.locale }}"
+                     id="languages-dropdown-invoker-2"
+                     class="g-color-gray-dark-v2 g-color-primary--hover g-text-underline--none--hover"
+                     aria-controls="languages-dropdown-2"
+                     aria-haspopup="true" aria-expanded="false" data-dropdown-event="click" data-dropdown-target="#languages-dropdown-2"
+                     data-dropdown-type="css-animation" data-dropdown-duration="500" data-dropdown-hide-on-scroll="false" data-dropdown-animation-in="fadeIn" data-dropdown-animation-out="fadeOut">
+                    {{ app.request.locale|upper }}&nbsp;<i class="fa fa-angle-down g-ml-3"></i>
+                  </a>
+                  <ul id="languages-dropdown-2" class="list-unstyled text-left u-shadow-v23 g-pos-abs g-left-0 g-bg-white g-width-160 g-z-index-2 g-py-20 g-pb-15 g-mt-25--lg g-mt-20--lg--scrolling" aria-labelledby="languages-dropdown-invoker-2">
+                    <li>
+                      <a class="d-block g-color-main g-color-primary--hover g-text-underline--none--hover g-py-8 g-px-20" href="en">English</a>
+                    </li>
+                    <li>
+                      <a class="d-block g-color-main g-color-primary--hover g-text-underline--none--hover g-py-8 g-px-20" href="fr">French</a>
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+            </nav>
+          </div>
+        </header>
+        <!-- End Header -->
+      {% endblock %}
+      {% block body %}{% endblock %}
+      {% block footer %}
+        <!-- Footer -->
+        <div id="contacts-section" class="g-bg-black-opacity-0_9 g-color-white-opacity-0_8 g-py-60">
+          <div class="container">
+            <div class="row">
+              <!-- Footer Content -->
+              <div class="col-lg-3 col-md-6 g-mb-40 g-mb-0--lg">
+                <div class="u-heading-v2-3--bottom g-brd-white-opacity-0_8 g-mb-20">
+                  <h2 class="u-heading-v2__title h6 text-uppercase mb-0">About Us</h2>
+                </div>
+
+              </div>
+              <!-- End Footer Content -->
+
+            </div>
+          </div>
+        </div>
+        <!-- End Footer -->
+      {% endblock %}
+    </main>
+        {% block javascripts %}
+            <!-- JS Global Compulsory -->
+            <script src="{{ asset('assets/vendor/jquery/jquery.min.js') }}"></script>
+            <script src="{{ asset('assets/vendor/jquery-migrate/jquery-migrate.min.js') }}"></script>
+            <script src="{{ asset('assets/vendor/popper.min.js') }}"></script>
+            <script src="{{ asset('assets/vendor/bootstrap/bootstrap.min.js') }}"></script>
+
+
+            <!-- JS Implementing Plugins -->
+            <script src="{{ asset('assets/vendor/appear.js') }}"></script>
+            <script src="{{ asset('assets/vendor/hs-megamenu/src/hs.megamenu.js') }}"></script>
+            <script src="{{ asset('assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+
+            <!-- JS Unify -->
+            <script src="{{ asset('assets/js/hs.core.js') }}"></script>
+            <script src="{{ asset('assets/js/helpers/hs.hamburgers.js') }}"></script>
+            <script src="{{ asset('assets/js/components/hs.header.js') }}"></script>
+            <script src="{{ asset('assets/js/components/hs.counter.js') }}"></script>
+
+            <!-- JS Customization -->
+            <script src="{{ asset('assets/js/custom.js') }}"></script>
+            <script  src="{{ asset('assets/js/components/hs.count-qty.js') }}"></script>
+            <script  src="{{ asset('assets/js/components/hs.dropdown.js') }}"></script>
+
+            <!-- JS Plugins Init. -->
+            <script>
+
+              $(document).on('ready', function () {
+                // Sidebar ajax calls
+                  $.ajax({
+                      dataType: "json",
+                      url: "{{ path('allPlayers') }}",
+                      success: function (data) {
+                          $('span#countPlayers').html(data);
+                      }
+                  });
+
+                  $.HSCore.components.HSDropdown.init($('[data-dropdown-target]'));
+
+                  var counters = $.HSCore.components.HSCounter.init('[class*="js-counter"]',{
+                      'time':2000
+                  });
+
+                  $.HSCore.components.HSCountQty.init('.js-quantity');
+
+              });
+
+              $(window).on('load', function () {
+                // initialization of header
+                $.HSCore.components.HSHeader.init($('#js-header'));
+                $.HSCore.helpers.HSHamburgers.init('.hamburger');
+
+                // initialization of HSMegaMenu component
+                $('.js-mega-menu').HSMegaMenu({
+                  event: 'hover',
+                  pageContainer: $('.container'),
+                  breakpoint: 991
+                });
+
+                // initialization of horizontal progress bars
+                setTimeout(function () { // important in this case
+                  var horizontalProgressBars = $.HSCore.components.HSProgressBar.init('.js-hr-progress-bar', {
+                    direction: 'horizontal',
+                    indicatorSelector: '.js-hr-progress-bar-indicator'
+                  });
+                }, 1);
+              });
+
+              $(window).on('resize', function () {
+                setTimeout(function () {
+                  $.HSCore.components.HSTabs.init('[role="tablist"]');
+                }, 200);
+              });
+            </script>
+        {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,14 @@
+runtime: php
+env: flex
+
+runtime_config:
+  document_root: public
+  front_controller_file: index.php
+
+env_variables:
+  APP_ENV: "prod"
+  APP_SECRET: "af0e59e4897f83ddc8edc487be0947bf"
+  MAILER_URL: "null://localhost"
+  DATABASE_URL: "mysql://wintr:WINTR2019@localhost?unix_socket=/cloudsql/silicon-vista-228107:us-central1:wintr-mysql;dbname=wintr"
+  OAUTH_DISCORD_CLIENT_ID: "531424334766669824"
+  OAUTH_DISCORD_CLIENT_SECRET: "wsJvMjo8bCj3zWPgL3cyqL5y2Xmv2lnv"

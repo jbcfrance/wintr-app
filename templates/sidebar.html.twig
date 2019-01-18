@@ -1,0 +1,17 @@
+<div class="col-lg-3 g-mb-50 g-mb-0--lg">
+
+  <!-- Sidebar Navigation -->
+  <div class="list-group list-group-border-0 g-mb-40">
+    <!-- Overall -->
+    {% if(active == 'index') %}
+      <a href="{{ path('home') }}" class="list-group-item list-group-item-action justify-content-between active">
+      {% else %}
+      <a href="{{ path('home') }}" class="list-group-item list-group-item-action justify-content-between">
+        {% endif %}
+      <span><i class="icon-home g-pos-rel g-top-1 g-mr-8"></i> </span>
+    </a>
+    <!-- End Overall -->
+  </div>
+  <!-- End Sidebar Navigation -->
+
+</div>

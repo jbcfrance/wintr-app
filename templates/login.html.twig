@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Title -->
+    <title>Wintr Application Login</title>
+
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Favicon -->
+    <!-- <link rel="shortcut icon" href="{{ asset('') }}"> -->
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+
+    {% endblock %}
+</head>
+
+<body>
+<main>
+    <!-- Header -->
+    <header id="js-header" class="u-header u-header--static">
+        <div class="u-header__section u-header__section--light g-bg-white g-transition-0_3 g-py-10">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <!-- Logo -->
+                    <a href="{{ path('home') }}" class="navbar-brand">
+                        <img src="{{ asset('assets/img/wintr/logo.png') }}" alt="Wintr Logo">
+                    </a>
+                    <!-- End Logo -->
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Login -->
+    <section class="container g-pt-100 g-pb-20">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5 flex-md-unordered g-mb-80">
+                <div class="g-brd-around g-brd-gray-light-v3 g-bg-white rounded g-px-30 g-py-50 mb-4">
+                    <header class="text-center mb-4">
+                        <h1 class="h3 g-color-black g-font-weight-300 text-capitalize">Login to your account</h1>
+                    </header>
+
+                    <!-- Form -->
+                    <form class="g-py-15">
+                        <div class="mb-4">
+                            <div class="input-group g-brd-primary--focus">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text g-width-45 g-brd-right-none g-brd-gray-light-v3 g-color-gray-dark-v5"><i class="icon-finance-067 u-line-icon-pro"></i></span>
+                                </div>
+                                <input class="form-control g-color-black g-brd-gray-light-v3 g-py-15 g-px-15" type="email" placeholder="Email Adress">
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <div class="input-group g-brd-primary--focus mb-4">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text g-width-45 g-brd-right-none g-brd-gray-light-v3 g-color-gray-dark-v5"><i class="icon-media-094 u-line-icon-pro"></i></span>
+                                </div>
+                                <input class="form-control g-color-black g-brd-gray-light-v3 g-py-15 g-px-15" type="password" placeholder="Password">
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-between mb-4">
+                            <div class="col align-self-center">
+                                <label class="form-check-inline u-check g-color-gray-dark-v5 g-font-size-13 g-pl-25 mb-0">
+                                    <input class="g-hidden-xs-up g-pos-abs g-top-0 g-left-0" type="checkbox">
+                                    <div class="u-check-icon-checkbox-v6 g-absolute-centered--y g-left-0">
+                                        <i class="fa g-rounded-2" data-check-icon="&#xf00c"></i>
+                                    </div>
+                                    Keep signed in
+                                </label>
+                            </div>
+                            <div class="col align-self-center text-right">
+                                <a class="g-font-size-13" href="#!">Forgot password?</a>
+                            </div>
+                        </div>
+
+                        <div class="mb-5">
+                            <button class="btn btn-block u-btn-primary g-py-13" type="button">Login</button>
+                        </div>
+
+                        <div class="d-flex justify-content-center text-center g-mb-30">
+                            <div class="d-inline-block align-self-center g-width-50 g-height-1 g-bg-gray-light-v1"></div>
+                            <span class="align-self-center g-color-gray-dark-v5 mx-4">OR</span>
+                            <div class="d-inline-block align-self-center g-width-50 g-height-1 g-bg-gray-light-v1"></div>
+                        </div>
+
+                        <div class="row no-gutters">
+                            <div class="col-6">
+                                <button class="btn btn-block u-btn-discord g-py-13 mr-2" type="button">
+                                    <i class="mr-1 fa fa-discord"></i>
+                                    Discord
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End Form -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Login -->
+
+    <!-- Copyright Footer -->
+    <footer class="g-bg-gray-dark-v1 g-color-white-opacity-0_8 g-py-20">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 text-center text-md-left g-mb-10 g-mb-0--md">
+                    <div class="d-lg-flex">
+                        <small class="d-block g-font-size-default g-mr-10 g-mb-10 g-mb-0--md">2018 &copy; All Rights Reserved.</small>
+                        <ul class="u-list-inline">
+                            <li class="list-inline-item">
+                                <a class="g-color-white-opacity-0_8 g-color-white--hover" href="#!">Privacy Policy</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <span>|</span>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="g-color-white-opacity-0_8 g-color-white--hover" href="#!">Terms of Use</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <span>|</span>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="g-color-white-opacity-0_8 g-color-white--hover" href="#!">License</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <span>|</span>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="g-color-white-opacity-0_8 g-color-white--hover" href="#!">Support</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Copyright Footer -->
+</main>
+
+<div class="u-outer-spaces-helper"></div>
+
+{{ encore_entry_script_tags('app') }}
+
+<!--Renders app.js & a webpack runtime.js file -->
+<script src="/build/runtime.js"></script>
+<script src="/build/app.js"></script>
+<!-- JS Global Compulsory -->
+<script src="{{ asset('assets/vendor/jquery/jquery.min.js') }}"></script>
+<script src="{{ asset('assets/vendor/jquery-migrate/jquery-migrate.min.js') }}"></script>
+<script src="{{ asset('assets/vendor/popper.min.js') }}"></script>
+<script src="{{ asset('assets/vendor/bootstrap/bootstrap.min.js') }}"></script>
+
+
+<!-- JS Implementing Plugins -->
+
+<!-- JS Unify -->
+<script src="{{ asset('assets/js/hs.core.js') }}"></script>
+<script src="{{ asset('assets/js/helpers/hs.focus-state.js') }}"></script>
+
+<!-- JS Customization -->
+<script src="{{ asset('assets/js/custom.js') }}"></script>
+
+<!-- JS Plugins Init. -->
+<script>
+    $(document).on('ready', function () {
+
+        // Form Focus State
+        $.HSCore.helpers.HSFocusState.init();
+    });
+
+    $(window).on('load', function () {
+        // initialization of header
+    });
+</script>
+</body>
+</html>
