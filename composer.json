@@ -64,11 +64,9 @@
             "cache:clear": "symfony-cmd"
         },
         "post-install-cmd": [
-            "yarn encore production",
             "@auto-scripts"
         ],
         "post-update-cmd": [
-            "yarn encore production",
             "@auto-scripts"
         ]
     },
