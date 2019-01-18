@@ -30,7 +30,6 @@
         "wohali/oauth2-discord-new": "^1.0"
     },
     "require-dev": {
-        "heroku/heroku-buildpack-php": "^148.0",
         "symfony/debug-pack": "*",
         "symfony/maker-bundle": "^1.11",
         "symfony/profiler-pack": "*",
