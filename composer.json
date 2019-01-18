@@ -2,7 +2,7 @@
     "type": "project",
     "license": "MIT",
     "require": {
-        "php": "^7.1",
+        "php": "^7.3",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "knpuniversity/oauth2-client-bundle": "^1.26",
@@ -15,7 +15,6 @@
         "symfony/flex": "^1.1",
         "symfony/form": "4.2.*",
         "symfony/framework-bundle": "4.2.*",
-        "symfony/monolog-bundle": "^3.1",
         "symfony/orm-pack": "^1.0",
         "symfony/process": "4.2.*",
         "symfony/security-bundle": "4.2.*",
