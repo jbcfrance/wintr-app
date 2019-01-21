@@ -10,21 +10,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class DiscordController extends AbstractController
 {
-    /**
-     * Link to this controller to start the "connect" process
-     *
-     * @Route("/connect", name="connect")
-     */
-    public function connectAction()
-    {
-
-
-        return $this->render('login.html.twig',
-            [
-
-            ]
-        );
-    }
 
     /**
      * Link to this controller to start the "connect" process

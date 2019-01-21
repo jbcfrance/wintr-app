@@ -14,23 +14,46 @@ use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 
+/**
+ * Class DiscordAuthenticator
+ * @package App\Security\Authenticator
+ */
 class DiscordAuthenticator extends SocialAuthenticator
 {
+    /**
+     * @var ClientRegistry
+     */
     private $clientRegistry;
+    /**
+     * @var EntityManagerInterface
+     */
     private $em;
 
+    /**
+     * DiscordAuthenticator constructor.
+     * @param ClientRegistry $clientRegistry
+     * @param EntityManagerInterface $em
+     */
     public function __construct(ClientRegistry $clientRegistry, EntityManagerInterface $em)
     {
         $this->clientRegistry = $clientRegistry;
         $this->em = $em;
     }
 
+    /**
+     * @param Request $request
+     * @return bool
+     */
     public function supports(Request $request)
     {
         // continue ONLY if the current ROUTE matches the check ROUTE
         return $request->attributes->get('_route') === 'connect_discord_check';
     }
 
+    /**
+     * @param Request $request
+     * @return \League\OAuth2\Client\Token\AccessToken|mixed
+     */
     public function getCredentials(Request $request)
     {
         // this method is only called if supports() returns true
@@ -43,6 +66,11 @@ class DiscordAuthenticator extends SocialAuthenticator
         return $this->fetchAccessToken($this->getDiscordClient());
     }
 
+    /**
+     * @param mixed $credentials
+     * @param UserProviderInterface $userProvider
+     * @return User|object|\Symfony\Component\Security\Core\User\UserInterface|null
+     */
     public function getUser($credentials, UserProviderInterface $userProvider)
     {
         /** @var DiscordUser $discordUser */
@@ -81,12 +109,23 @@ class DiscordAuthenticator extends SocialAuthenticator
             ->getClient('discord');
     }
 
+    /**
+     * @param Request $request
+     * @param TokenInterface $token
+     * @param string $providerKey
+     * @return Response|null
+     */
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey)
     {
         // on success, let the request continue
         return null;
     }
 
+    /**
+     * @param Request $request
+     * @param AuthenticationException $exception
+     * @return Response|null
+     */
     public function onAuthenticationFailure(Request $request, AuthenticationException $exception)
     {
         $message = strtr($exception->getMessageKey(), $exception->getMessageData());
@@ -101,7 +140,7 @@ class DiscordAuthenticator extends SocialAuthenticator
     public function start(Request $request, AuthenticationException $authException = null)
     {
         return new RedirectResponse(
-            '/connect/', // might be the site, where users choose their oauth provider
+            '/', // might be the site, where users choose their oauth provider
             Response::HTTP_TEMPORARY_REDIRECT
         );
     }
