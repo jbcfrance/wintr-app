@@ -5,11 +5,9 @@ security:
 
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
-        # used to reload user from session & other features (e.g. switch_user)
-        app_user_provider:
-            entity:
-                class: App\Entity\User
-                property: email
+        oauth:
+            id: knpu.oauth2.user_provider
+
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
@@ -19,8 +17,6 @@ security:
             guard:
                 authenticators:
                     - App\Security\Authenticator\DiscordAuthenticator
-                    - App\Security\DiscordAuthenticator
-                entry_point: App\Security\Authenticator\DiscordAuthenticator
 
             # activate different ways to authenticate
 

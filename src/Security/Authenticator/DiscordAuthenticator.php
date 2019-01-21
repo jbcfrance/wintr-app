@@ -47,7 +47,7 @@ class DiscordAuthenticator extends SocialAuthenticator
     public function supports(Request $request)
     {
         // continue ONLY if the current ROUTE matches the check ROUTE
-        return $request->attributes->get('_route') === 'connect_discord_check';
+        return $request->attributes->get('redirect_uri') === 'connect_discord_check';
     }
 
     /**
@@ -140,7 +140,7 @@ class DiscordAuthenticator extends SocialAuthenticator
     public function start(Request $request, AuthenticationException $authException = null)
     {
         return new RedirectResponse(
-            '/', // might be the site, where users choose their oauth provider
+            '/connect/', // might be the site, where users choose their oauth provider
             Response::HTTP_TEMPORARY_REDIRECT
         );
     }
