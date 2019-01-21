@@ -1,0 +1,8 @@
+
+// Customs SCSS
+@import "variables";
+@import "mixins";
+
+body {
+  background: $primary;
+}
