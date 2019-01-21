@@ -26,3 +26,9 @@ yarn-error.log
 /public/assets/
 
 /.idea
+/templates/sidebar.html.twig
+/templates/page-login-12.html
+/templates/page-profile-main-1.html
+/templates/index.html.twig
+/templates/blank-page.html
+/templates/page-login-and-signup-1.html

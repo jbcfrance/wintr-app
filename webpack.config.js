@@ -8,6 +8,7 @@ Encore
     // only needed for CDN's or sub-directory deploy
     //.setManifestKeyPrefix('build/')
 
+    // Automatic discover and prep of the img for the project
     .copyFiles({
         from: './assets/img',
         // optional target path, relative to the output dir
@@ -17,7 +18,7 @@ Encore
         to: 'images/[path][name].[hash:8].[ext]',
 
         // only copy files matching this pattern
-        //pattern: /\.(png|jpg|jpeg)$/
+        pattern: /\.(png|jpg|jpeg|svg)$/
     })
     /*
      * ENTRY CONFIG
@@ -56,7 +57,7 @@ Encore
     //.enableTypeScriptLoader()
 
     // uncomment if you're having problems with a jQuery plugin
-    //.autoProvidejQuery()
+    .autoProvidejQuery()
 
     // uncomment if you use API Platform Admin (composer req api-admin)
     //.enableReactPreset()
