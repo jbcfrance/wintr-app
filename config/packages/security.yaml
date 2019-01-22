@@ -1,12 +1,6 @@
 security:
-    encoders:
-        App\Entity\User:
-            algorithm: argon2i
 
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
-    providers:
-        oauth:
-            id: knpu.oauth2.user_provider
 
     firewalls:
         dev:
@@ -14,9 +8,6 @@ security:
             security: false
         main:
             anonymous: ~
-            guard:
-                authenticators:
-                    - App\Security\Authenticator\DiscordAuthenticator
 
             # activate different ways to authenticate
 
